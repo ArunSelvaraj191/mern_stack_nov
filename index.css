@@ -1,0 +1,93 @@
+/* Element Seloector Example */
+h1 {
+  color: rgb(255, 216, 21);
+  text-align: center;
+  animation: fadeIn 5s ease-in;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: cadetblue;
+}
+
+.div-1 {
+  /* padding: 50px; */
+  /* margin: 50px; */
+  animation: fadeIn 5s ease-in;
+  border: 2px solid black;
+}
+.div-2 {
+  /* padding: 50px; */
+  /* margin: 50px; */
+  animation: another-fadeIn 5s ease-in;
+  border: 2px solid black;
+}
+
+/* Class Selector Example */
+
+.btn {
+  background-color: blue;
+  color: white;
+}
+
+.btn:hover {
+  transition: background-color 0.5s ease;
+  background-color: rgb(248, 0, 0);
+}
+
+/* ID Selector Example */
+
+#label {
+  font-weight: bold;
+}
+
+/* Flexbox Example */
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Grid Layout Example */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+/* Responsive Design Example */
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Animation Example */
+
+@keyframes fadeIn {
+  from {
+    color: red;
+    opacity: 0.5;
+  }
+  to {
+    color: blue;
+    opacity: 1;
+  }
+}
+@keyframes another-fadeIn {
+  from {
+    color: blue;
+    opacity: 0.5;
+  }
+  to {
+    color: red;
+    opacity: 1;
+  }
+}
