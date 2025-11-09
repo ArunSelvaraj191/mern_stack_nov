@@ -11,10 +11,32 @@
         text-align: center;
       }
     </style> -->
-    <!-- <script>
-      alert("Welcome to my webpage!");
-      console.log("Hello World");
-    </script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      // Enquire this
+      // let btn = document.getElementById("btn-sample");
+      // let msg = document.getElementById("msg");
+
+      // if (btn && msg) {
+      //   btn.addEventListener("click", () => {
+      //     msg.innerText = "DOM Manipulation Successful!";
+      //   });
+      // }
+      // const loadUserDataAxios = () => {
+      //   axios
+      //     .get("https://jsonplaceholder.typicode.com/users")
+      //     .then((response) => {
+      //       console.log("Axios User Data :::", response.data);
+      //     })
+      //     .catch((error) =>
+      //       console.log("Error fetching user data with Axios:", error)
+      //     )
+      //     .finally(() =>
+      //       console.log("Axios user data fetch attempt completed.")
+      //     );
+      // };
+      // loadUserDataAxios();
+    </script>
     <script src="index.js"></script>
   </head>
   <body>
@@ -27,7 +49,10 @@
       <a href="https://www.linkedin.com/in/arun-kumar-168674183/">LinkedIn</a>
     </nav>
     <main>
-      <button class="btn" onclick="loopsFunction()">Click Me</button>
+      <h2 id="title">Welcome Students!</h2>
+      <!-- <button class="btn" onclick="changeText()">Click Me</button> -->
+      <button id="btn-sample">Show Message</button>
+      <p id="msg"></p>
       <div class="div-1">Box Model</div>
       <div class="div-2">Box Model</div>
       <ol>

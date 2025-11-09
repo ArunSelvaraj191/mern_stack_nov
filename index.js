@@ -1,3 +1,5 @@
+// const axios = require("axios");
+// import axios from "axios";
 // alert("Welcome to my Extertnal File!");
 // console.log("Hello World");
 
@@ -106,3 +108,86 @@ const loopsFunction = () => {
 const handleAlert = () => {
   alert("Button Clicked!");
 };
+
+const changeText = () => {
+  // const heading = document.getElementById("title"); // Selecting the element by id
+  const heading = document.getElementById("title"); // Selecting the element by id
+  console.log("heading :::", heading);
+  heading.innerText = "DOM Manipulation Successful!"; // Changing the text content
+  heading.style.color = "green";
+};
+
+// Enquire this
+
+// const btn = document.getElementById("btn");
+// const msg = document.getElementById("msg");
+
+// btn.addEventListener("click", () => {
+//   msg.innerText = "DOM Manipulation Successful!";
+// });
+
+// Callback
+
+// const fetData = (callback) => {
+//   console.log("Fetching Data...");
+//   setTimeout(() => {
+//     const data = { id: 1, name: "Arun Kumar", age: 27 };
+//     callback(data);
+//   }, 3000);
+// };
+
+// const displayData = (data) => {
+//   console.log("Data received:", data);
+// };
+
+// fetData(displayData);
+
+// Promises
+
+// const fetData = () => {
+//   return new Promise((resolve, reject) => {
+//     console.log("Fetching Data...");
+//     let sucess = true; // change to false to test rejection
+//     setTimeout(() => {
+//       if (sucess) {
+//         const data = { id: 1, name: "Arun Kumar", age: 27 };
+//         const jsonstring = JSON.stringify(data);
+//         const jsonparse = JSON.parse(jsonstring);
+//         console.log("JSON Stringify:", typeof jsonstring);
+//         console.log("JSON Parse:", typeof jsonparse);
+//         resolve(jsonparse);
+//       } else {
+//         reject("Error: Unable to fetch data");
+//       }
+//     }, 3000);
+//   });
+// };
+
+// fetData()
+//   .then((data) => console.log("Data received:", data))
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("Fetch attempt completed."));
+
+// const loadUSerData = () => {
+//   fetch("https://jsonplaceholder.typicode.com/users")
+//     .then((response) => response.json())
+//     .then((data) => console.log("USer Data :::", data))
+//     .catch((error) => console.log("Error fetching user data:", error))
+//     .finally(() => console.log("User data fetch attempt completed."));
+// };
+
+// loadUSerData();
+
+const loadUserDataAxios = async () => {
+  await axios
+    .get("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+      console.log("Axios User Data :::", response.data);
+    })
+    .catch((error) =>
+      console.log("Error fetching user data with Axios:", error)
+    )
+    .finally(() => console.log("Axios user data fetch attempt completed."));
+};
+
+loadUserDataAxios();
